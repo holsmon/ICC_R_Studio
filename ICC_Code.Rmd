@@ -1,0 +1,45 @@
+---
+title: "ICC Code for test data, revised for INS Gender"
+date: "OG: April 6th, 2023, Recent edits: August 23, 2023"
+output: html_document
+---
+
+# A link to a helpful Youtube video on ICC
+https://www.youtube.com/watch?v=lFF3wp3dk2Y
+
+# And a helpful ICC explanation for neuroimaging data
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5807222/
+
+## Load libraries
+```{r}
+
+# readr is needed for read_csv function
+# psych is needed for ICC function
+
+# you will need to use install.packages for these libraries if you have not done so previously. library is used to load the packages once they are already installed.
+
+library("readr")
+library("psych")
+
+```
+
+## Load your data (graph theory output)
+```{r}
+
+# Make sure your data only has two columns. One with time1 data and the second with time2 data. 
+
+W <- read_csv("C:/Users/hols0/OneDrive/Desktop/Penn_State/Frank_Lab_Things/PAHEALTH/ICC/ICC_calcs.csv")
+
+```
+
+### Run your ICC code!
+```{r}
+
+ICC(W, missing=TRUE, alpha=.05, lmer=TRUE, check.keys=FALSE)
+
+# W is the dataset, missing = true for missing data, alpha is the p value you are testing, lmer handles missing data as well, check.keys reverses items that are negatively correlated with total score.   
+
+# See output below for the following line of code. Repeat this code for however many datasets you need. 
+
+
+```
