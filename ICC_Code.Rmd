@@ -26,7 +26,7 @@ library("psych")
 ## Load your data (graph theory output)
 ```{r}
 
-# Make sure your data only has two columns. One with time1 data and the second with time2 data. 
+# Make sure your data only has two columns. One with rest1 data and the second with rest2 data. 
 
 W <- read_csv("C:/Users/hols0/OneDrive/Desktop/Penn_State/Frank_Lab_Things/PAHEALTH/ICC/ICC_calcs.csv")
 
